@@ -1,5 +1,6 @@
 let obj;
 let morris0, morris1, morris3, morris4, morris5, morris6, morris7;
+let assemblage, busstop;
 
 let images;
 let index = 0;
@@ -19,6 +20,9 @@ function preload() {
     morris7 = loadImage("images/morris7.jpg");
 
     images = [morris0, morris1, morris3, morris4, morris5, morris6, morris7];
+
+    assemblage = loadImage("images/assemblage.png");
+    busstop = loadImage("images/busstop.png");
 }
 
 function setup() {
@@ -28,14 +32,49 @@ function setup() {
     two.pixelDensity(1);
 
     draw2d();
+
+    controls();
 }
 
 function draw() {
 
     draw3d();
+    checkHover();
 }
 
 function mousePressed() {
+
+    // change();
+}
+
+function keyPressed() {
+
+    if (key === "1") {
+        change();
+    } else if (key === "2") {
+        change();
+    } else if (key === "3") {
+        change();
+    } else if (key === "4") {
+        change();
+    } else if (key === "5") {
+        change();
+    } else if (key === "6") {
+        change();
+    }
+}
+
+function controls() {
+
+    select("#btn1").mousePressed(change);
+    select("#btn2").mousePressed(change);
+    select("#btn3").mousePressed(change);
+    select("#btn4").mousePressed(change);
+    select("#btn5").mousePressed(change);
+    select("#btn6").mousePressed(change);
+}
+
+function change() {
 
     index++;
 
@@ -67,7 +106,7 @@ function draw2d() {
 
 function draw3d() {
 
-    background(255);
+    background(0);
 
     drawBackground();
 
@@ -81,17 +120,17 @@ function drawBackground() {
     angleMode(DEGREES);
     noStroke();
     texture(images[index]);
-    translate(-width/2, -width/2, -500);
-    plane(width, width);
-    translate(width, 0, 0);
+    translate(-height/2, -height/2, -500);
+    plane(height, height);
+    translate(height, 0, 0);
     rotateY(180)
-    plane(width, width);
-    translate(0, width, 0);
+    plane(height, height);
+    translate(0, height, 0);
     rotateX(180)
-    plane(width, width);
-    translate(width, 0, 0);
+    plane(height, height);
+    translate(height, 0, 0);
     rotateY(180)
-    plane(width, width);
+    plane(height, height);
     angleMode(RADIANS);
     pop();
 }
@@ -111,4 +150,13 @@ function drawCrane(delay) {
     texture(images[index]);
     model(obj);
     pop();
+}
+
+function checkHover() {
+
+    if (mouseX > (width-height) / 2 && mouseX < (width-height)/2 + height) {
+        select("#button-holder").show();
+    } else {
+        select("#button-holder").hide();
+    }
 }
