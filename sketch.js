@@ -1,4 +1,4 @@
-let obj;
+let crane;
 let morris0, morris1, morris3, morris4, morris5, morris6, morris7;
 let assemblage, busstop;
 
@@ -9,7 +9,7 @@ let two;
 
 function preload() {
 
-    obj = loadModel("crane.obj");
+    crane = loadModel("crane.obj");
     morris0 = loadImage("images/morris0.jpg");
     morris1 = loadImage("images/morris1.jpg");
     morris2 = loadImage("images/morris2.jpg");
@@ -42,24 +42,19 @@ function draw() {
     checkHover();
 }
 
-function mousePressed() {
-
-    // change();
-}
-
 function keyPressed() {
 
-    if (key === "1") {
+    if (key === "q" || key === "Q") {
         change();
-    } else if (key === "2") {
+    } else if (key === "w" || key === "W") {
         change();
-    } else if (key === "3") {
+    } else if (key === "e" || key === "E") {
         change();
-    } else if (key === "4") {
+    } else if (key === "r" || key === "R") {
         change();
-    } else if (key === "5") {
+    } else if (key === "t" || key === "T") {
         change();
-    } else if (key === "6") {
+    } else if (key === "y" || key === "Y") {
         change();
     }
 }
@@ -112,6 +107,11 @@ function draw3d() {
 
     drawCrane(0);
     drawCrane(180);
+    drawSphere(180, 0.1, 200);
+    drawSphere(90, 0.15, 100);
+    drawSphere(110, 0.2, 300);
+    drawSphere(210, 0.25, 50);
+    drawSphere(70, 0.3, 250);
 }
 
 function drawBackground() {
@@ -148,7 +148,24 @@ function drawCrane(delay) {
     scale(height * 0.25);
     noStroke();
     texture(images[index]);
-    model(obj);
+    model(crane);
+    pop();
+}
+
+function drawSphere(delay, size, distance) {
+
+    push();
+    rotateX(90);
+    rotateY(90);
+    s = 0.01;
+    rotateZ(frameCount * s + delay);
+    rotateY(frameCount * s + delay);
+    rotateX(frameCount * s + delay);
+    translate(distance, distance, 0);
+    scale(height * 0.25);
+    noStroke();
+    texture(images[index]);
+    sphere(size);
     pop();
 }
 
