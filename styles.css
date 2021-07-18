@@ -11,7 +11,7 @@
 button {
     color: #fff;
     font-family: "Caveat", sans-serif;
-    background-color: #000;
+    background-color: #444444;
     border: none;
     border-radius: 7px;
     text-align: center;
@@ -24,6 +24,6 @@ button {
 }
 
 button:hover {
-    color: #000;
+    color: #444444;
     background-color: #fff;
 }
