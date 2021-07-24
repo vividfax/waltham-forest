@@ -81,27 +81,12 @@ function change() {
 
 function draw2d() {
 
-    two.push();
-    two.background(250);
-    colorMode(HSB, 100);
-
-    two.noStroke();
-
-    for (let i = 0; i < 500; i++) {
-
-        let col = color(random(100), random(40), 100);
-        let xPos = random(width);
-        let yPos = random(width);
-
-        two.fill(col)
-        two.ellipse(xPos, yPos, random(100, 200));
-    }
-    two.pop();
 }
 
 function draw3d() {
 
     background(0);
+	ambientLight(255);
 
     drawBackground();
 
