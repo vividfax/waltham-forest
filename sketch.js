@@ -1,5 +1,8 @@
 let two1, two2;
 
+let flickCache;
+let flickCache2;
+
 function setup() {
 
     createCanvas(windowWidth, windowHeight, WEBGL);
@@ -11,6 +14,13 @@ function setup() {
     draw2d();
 
     controls();
+
+    // pencil.loop = true;
+    // pencil.play();
+    // marker.loop = true;
+    // marker.play();
+    // felt.loop = true;
+    // felt.play();
 }
 
 function draw() {
@@ -54,6 +64,7 @@ function change(n) {
         index[n] = 0;
     }
     draw2d();
+    playFlick();
 }
 
 function draw2d() {
@@ -150,4 +161,18 @@ function checkHover() {
     } else {
         select("#button-holder").hide();
     }
+}
+
+function playFlick() {
+
+    let flick;
+
+    do {
+        flick = int(random(5));
+    } while (flick == flickCache || flick == flickCache2);
+
+    flicks[flick].play();
+
+    flickCache2 = flickCache;
+    flickCache = flick;
 }

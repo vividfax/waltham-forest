@@ -1,5 +1,8 @@
 let crane;
 
+let pencil, marker, felt;
+let flicks = [];
+
 let layer = [];
 
 let index = [0, 0, 0, 0, 0, 0];
@@ -7,6 +10,14 @@ let index = [0, 0, 0, 0, 0, 0];
 function preload() {
 
     crane = loadModel("crane.obj");
+
+    pencil = new Audio("sounds/pencil.ogg");
+    marker = new Audio("sounds/marker.ogg");
+    felt = new Audio("sounds/felt.ogg");
+
+    for (let i = 0; i < 5; i++) {
+        flicks[i] = new Audio("sounds/flick" + i + ".wav");
+    }
 
     i1a = loadImage("images/1a.png");
     i2a = loadImage("images/2a.png");
