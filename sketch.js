@@ -15,12 +15,7 @@ function setup() {
 
     controls();
 
-    // pencil.loop = true;
-    // pencil.play();
-    // marker.loop = true;
-    // marker.play();
-    // felt.loop = true;
-    // felt.play();
+    street.loop = true;
 }
 
 function draw() {
@@ -64,6 +59,7 @@ function change(n) {
         index[n] = 0;
     }
     draw2d();
+    street.play();
     playFlick();
 }
 
