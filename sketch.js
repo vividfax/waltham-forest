@@ -16,6 +16,7 @@ function setup() {
     controls();
 
     street.loop = true;
+    pencil.loop = true;
 }
 
 function draw() {
@@ -59,7 +60,9 @@ function change(n) {
         index[n] = 0;
     }
     draw2d();
+
     street.play();
+    pencil.play();
     playFlick();
 }
 

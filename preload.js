@@ -1,6 +1,7 @@
 let crane;
 
 let street;
+let pencil;
 let flicks = [];
 
 let layer = [];
@@ -12,6 +13,7 @@ function preload() {
     crane = loadModel("crane.obj");
 
     street = new Audio("sounds/street.ogg");
+    pencil = new Audio("sounds/pencil.ogg");
 
     for (let i = 0; i < 5; i++) {
         flicks[i] = new Audio("sounds/flick" + i + ".wav");
