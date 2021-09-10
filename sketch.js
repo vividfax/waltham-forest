@@ -73,19 +73,20 @@ function draw2d() {
     two1.image(layer[3][index[3]], 0, 0, two1.width, two1.width);
     two1.image(layer[4][index[4]], 0, 0, two1.width, two1.width);
     two1.image(layer[5][index[5]], 0, 0, two1.width, two1.width);
+    two1.background(255, 255, 255, 50);
 
     two2.image(layer[1][index[1]], 0, 0, two2.width, two2.width);
     two2.image(layer[2][index[2]], 0, 0, two2.width, two2.width);
     two2.image(layer[3][index[3]], 0, 0, two2.width, two2.width);
     two2.image(layer[4][index[4]], 0, 0, two2.width, two2.width);
     two2.image(layer[5][index[5]], 0, 0, two2.width, two2.width);
+    two2.background(255, 255, 255, 50);
     two2.image(layer[0][index[0]], 0, 0, two2.width, two2.width);
 }
 
 function draw3d() {
 
     background(0);
-	// ambientLight(255, 222, 200);
     ambientLight(255);
 
     drawBackground();
