@@ -85,7 +85,8 @@ function draw2d() {
 function draw3d() {
 
     background(0);
-	ambientLight(255);
+	// ambientLight(255, 222, 200);
+    ambientLight(255);
 
     drawBackground();
 
