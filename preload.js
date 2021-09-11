@@ -33,15 +33,20 @@ function preload() {
     layer[2].push(loadImage("images/3b.png"));
     layer[2].push(loadImage("images/3c.png"));
     layer[2].push(loadImage("images/3d.png"));
+    layer[2].push(loadImage("images/3e.png"));
+    layer[2].push(loadImage("images/3f.png"));
+    layer[2].push(loadImage("images/3g.png"));
     layer[3].push(loadImage("images/4a.png"));
     layer[4].push(loadImage("images/5a.png"));
     layer[4].push(loadImage("images/5b.png"));
     layer[4].push(loadImage("images/5c.png"));
     layer[4].push(loadImage("images/5d.png"));
     layer[4].push(loadImage("images/5e.png"));
+    layer[4].push(loadImage("images/5f.png"));
     layer[5].push(loadImage("images/6a.png"));
     layer[5].push(loadImage("images/6b.png"));
     layer[5].push(loadImage("images/6c.png"));
     layer[5].push(loadImage("images/6d.png"));
     layer[5].push(loadImage("images/6e.png"));
+    layer[5].push(loadImage("images/6f.png"));
 }
