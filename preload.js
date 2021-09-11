@@ -29,6 +29,7 @@ function preload() {
     layer[1].push(loadImage("images/2h.png"));
     layer[1].push(loadImage("images/2i.png"));
     layer[1].push(loadImage("images/2j.png"));
+    layer[1].push(loadImage("images/2k.png"));
     layer[2].push(loadImage("images/3a.png"));
     layer[2].push(loadImage("images/3b.png"));
     layer[2].push(loadImage("images/3c.png"));
@@ -49,4 +50,5 @@ function preload() {
     layer[5].push(loadImage("images/6d.png"));
     layer[5].push(loadImage("images/6e.png"));
     layer[5].push(loadImage("images/6f.png"));
+    layer[5].push(loadImage("images/6g.png"));
 }
