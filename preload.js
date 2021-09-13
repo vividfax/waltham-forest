@@ -19,6 +19,8 @@ function preload() {
         flicks[i] = new Audio("sounds/flick" + i + ".wav");
     }
     layer[0].push(loadImage("images/1a.png"));
+    layer[0].push(loadImage("images/1b.png"));
+    layer[0].push(loadImage("images/1c.png"));
     layer[1].push(loadImage("images/2a.png"));
     layer[1].push(loadImage("images/2b.png"));
     layer[1].push(loadImage("images/2c.png"));
