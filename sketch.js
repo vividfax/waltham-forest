@@ -3,6 +3,45 @@ let two1, two2;
 let flickCache;
 let flickCache2;
 
+let colorFilters = [
+    {
+        "r": 255,
+        "g": 255,
+        "b": 255
+    },
+    {
+        "r": 255,
+        "g": 150,
+        "b": 150
+    },
+    {
+        "r": 150,
+        "g": 255,
+        "b": 150
+    },
+    {
+        "r": 150,
+        "g": 150,
+        "b": 255
+    },
+    {
+        "r": 150,
+        "g": 255,
+        "b": 255
+    },
+    {
+        "r": 255,
+        "g": 150,
+        "b": 255
+    },
+    {
+        "r": 255,
+        "g": 255,
+        "b": 150
+    }
+];
+let filterIndex = 0;
+
 function setup() {
 
     createCanvas(windowWidth, windowHeight, WEBGL);
@@ -37,8 +76,9 @@ function keyPressed() {
         change(3);
     } else if (key === "t" || key === "T") {
         change(4);
-    // } else if (key === "y" || key === "Y") {
-    //     change(5);
+    } else if (key === "y" || key === "Y") {
+        // change(5);
+        changeFilter();
     }
 }
 
@@ -50,6 +90,7 @@ function controls() {
     select("#btn4").mousePressed(() => change(3));
     select("#btn5").mousePressed(() => change(4));
     // select("#btn6").mousePressed(() => change(5));
+    select("#btn6").mousePressed(changeFilter);
 }
 
 function change(n) {
@@ -64,6 +105,21 @@ function change(n) {
     street.play();
     pencil.play();
     playFlick();
+}
+
+function changeFilter() {
+
+    filterIndex++;
+
+    if (filterIndex == colorFilters.length) {
+        filterIndex = 0;
+    }
+    draw2d();
+
+    street.play();
+    pencil.play();
+    playFlick();
+
 }
 
 function draw2d() {
@@ -87,7 +143,8 @@ function draw2d() {
 function draw3d() {
 
     background(0);
-    ambientLight(255);
+
+    ambientLight(colorFilters[filterIndex].r, colorFilters[filterIndex].g, colorFilters[filterIndex].b);
 
     drawBackground();
 
