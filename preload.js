@@ -48,6 +48,7 @@ function preload() {
     layer[3].push(loadImage("images/4d.png"));
     layer[3].push(loadImage("images/4e.png"));
     layer[3].push(loadImage("images/4f.png"));
+    layer[3].push(loadImage("images/4g.png"));
     layer[4].push(loadImage("images/5a.png"));
     layer[4].push(loadImage("images/5b.png"));
     layer[4].push(loadImage("images/5c.png"));
